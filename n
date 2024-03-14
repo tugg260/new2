@@ -1,0 +1,25 @@
+import kotlin.random.Random
+
+fun main() {
+    println("Добро пожаловать в игру 'Угадай число'!")
+    println("Я загадал число от 1 до 100. Попробуйте угадать его.")
+
+    val secretNumber = Random.nextInt(1, 101)
+    var attempts = 0
+    var guess: Int
+
+    while (true) {
+        print("Введите вашу догадку: ")
+        guess = readLine()?.toIntOrNull() ?: continue
+        attempts++
+
+        when {
+            guess == secretNumber -> {
+                println("Поздравляю! Вы угадали число $secretNumber за $attempts попыток.")
+                break
+            }
+            guess < secretNumber -> println("Загаданное число больше.")
+            else -> println("Загаданное число меньше.")
+        }
+    }
+}
