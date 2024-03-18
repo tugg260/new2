@@ -15,7 +15,7 @@ fun main() {
 
         when {
             guess == secretNumber -> {
-                println("Поздравляю! Вы угадали число $secretNumber за $attempts попыток.")
+                println("Поздравляю! Вы угадали число $secretNumber за $attempts попыток")
                 break
             }
             guess < secretNumber -> println("Загаданное число больше.")
