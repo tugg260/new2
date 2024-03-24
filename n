@@ -19,7 +19,7 @@ fun main() {
                 break
             }
             guess < secretNumber -> println("Загаданное число больше.")
-            else -> println("Загаданное число меньше.")
+            else -> println("Загаданное число меньше")
         }
     }
 }
